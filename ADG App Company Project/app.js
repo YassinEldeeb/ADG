@@ -245,10 +245,3 @@ document.onreadystatechange = function () {
 
 //!
 //!//!
-//Footer
-
-//
-//
-//
-//
-//
