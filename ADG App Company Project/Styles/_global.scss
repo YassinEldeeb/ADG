@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+// li.active-link::after {
+//   width: 100%;
+// }
+html {
+  font-size: 62.5%;
+}
+ul li {
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+//!
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  z-index: 9999;
+  background: white;
+  transition: 0.2s ease-in-out;
+}
+
+.content-loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#loader-mob {
+  transition: 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  height: 40vh;
+  transform: scale(0.9);
+  filter: drop-shadow(0 0 15px rgba(255, 102, 0, 0.25));
+}
+
+@media screen and (max-width: 941px) {
+  #loader-mob {
+    height: 25vh;
+  }
+}
+#Loader-Simulator {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: rotationSimulation 1.5s infinite ease-in-out;
+}
+@keyframes rotationSimulation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.cont-loader svg {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes slide-preloader {
+  to {
+    transform: rotate(2880deg);
+  }
+}
+@keyframes jumping-logo {
+  from {
+    transform: translateY(-3%);
+  }
+  to {
+    transform: translateY(3%);
+  }
+}
+body.activePreloader {
+  overflow: hidden;
+}
+.loader-transition-ending {
+  opacity: 0;
+  // transform: translateX(-102%);
+  pointer-events: none;
+  transition: 0.6s cubic-bezier(0.76, 0, 0.24, 1) !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+//!
+.about-ul li.active::after {
+  width: 100%;
+  height: 0.3rem;
+}
+//!Footer
+.developerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1.3rem;
+  width: 100%;
+}
+#star {
+  width: 25px;
+  height: 25px;
+  transform: translateY(15%);
+}
+.developer {
+  font-weight: 400;
+  font-size: calc(0.7rem + 1vw);
+  color: rgb(241, 241, 241);
+  flex: 1 1 40rem;
+}
+.contact-developer {
+  color: rgb(241, 241, 241);
+  font-weight: 400;
+  font-size: calc(0.7rem + 1vw);
+  flex: 1 1 40rem;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-wrapper {
+  background: linear-gradient(to right, #2f2e41f1 50%, #3f3d56);
+}
+.about1-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 11vh;
+  padding: 2rem 0rem;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: calc(0.08rem + 1vw);
+  width: 85%;
+  margin: auto;
+  flex-direction: column;
+}
+.footer-ul1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 40rem;
+  flex-wrap: wrap;
+}
+.firstFooter-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about1-footer h1 {
+  flex: 1 1 40rem;
+}
+.footer-ul1 li svg {
+  width: calc(2rem + 1vw);
+  height: calc(2rem + 1vw);
+}
+//!Transaltion
+.translate {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid black;
+  border-right: unset;
+  font-size: calc(0.5rem + 1vw);
+  padding: 0.5rem 1rem;
+  padding-right: 1.5rem;
+  border-radius: 4px;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+  cursor: pointer;
+  background: #3f3d56d2;
+  color: white;
+}
+.globalFont-Arabic {
+  font-family: "Changa", sans-serif !important;
+}
+.translate {
+  font-family: "Changa", sans-serif !important;
+  font-weight: 400;
+}
+.Logo-Translation {
+  transform: translateY(11%) !important;
+}
+//
+//
+.activeInfo::before {
+  content: "";
+  display: inline-block;
+  width: calc(0.3rem + 1vw);
+  height: calc(0.3rem + 1vw);
+  background: url("../Images/dot.png");
+  background-position: center;
+  background-size: cover;
+  transform: translateY(13%);
+  margin-right: 0.4rem;
+}
+.right-li {
+  position: relative;
+}
+.info-ar::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.right-after-li a li::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 941px) {
+  .footer-ul1 li svg {
+    width: calc(3rem + 1vw);
+    height: calc(3rem + 1vw);
+  }
+}
+@media screen and(max-width:363px) {
+  .squeres-cont {
+    width: 40% !important;
+  }
+}
